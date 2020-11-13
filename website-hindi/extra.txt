@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bear 'N Bull</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.button {
+  border-radius: 4px;
+  background-color: #006400;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+body, html {
+  height: 100%;
+  background-image: url("mainback.gif");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.topnav a:hover {
+  background-color: #228B22;
+  color: black;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+
+<div class="topnav">
+  <a href="#home">Home</a>
+  <a href="List of companies.html">List of Schemes</a>
+  <a href="aboutPage.html">About Us</a>
+  <a href="formpage.html">Feedback</a>
+  <a href="https://www.google.com/search?rlz=1C1NHXL_enIN837IN837&tbm=nws&sxsrf=ALeKk00kKRcpfQ2xS7T6_ZtYc_B_7Z0Tkw:1583156546900&q=farming+news+india&spell=1&sa=X&ved=0ahUKEwjU5ufc9fvnAhVDXn0KHcnwB08QBQgmKAA&biw=1536&bih=706&dpr=1.25">Farming News</a>
+</div>
+
+<div>  
+  
+    
+
+  <br>
+  <br><br>
+  <br>
+  <br>
+<center>
+
+ <table cellpadding="10";>
+  <tr>
+    <form method="get" action="chart.html">
+    <button class="button"><span>Grow with Us</span></button>
+</form>
+  <tr>
+    <form method="get" action="chatbot.html">
+    <button class="button"><span>Sell with Us</span></button>
+</form>
+</tr>
+
+<tr>
+  <form method="get" action="dashboard.html">
+    <button class="button"><span>Where's My DashBoard??</span></button>
+</form>
+</tr>
+
+<tr>
+  <form method="get" action="login page.html">
+    <button class="button"><span>Secure Trading..</span></button>
+</form>
+</tr>  
+  
+</table>
+<br>
+</center>
+
+</div>
+
+</body>
+</html>

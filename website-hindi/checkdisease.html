@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title> Check Disease</title>
+    <link rel="stylesheet" href="../controllers/style_index.css">
+    <link rel="icon" href="../images/icon.png">
+</head>
+<style>
+    body {
+      background-image: url("leaf.jpg");
+      background-color: rgb(136, 194, 194);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    #custom-text{
+        color:rgb(153, 155, 155);
+    }
+</style>
+<body>
+    <br>
+    <br>
+    <p style="font-family:Lucida Console;font-size:60px; color:rgb(0, 0, 0);text-align: center;">
+Check Disease
+    </p><hr> 
+
+    <p style="font-family:Lucida Console;font-size:20px; color:rgb(0, 0, 0);text-align: center;">
+        Please upload the leaf image
+        <br><img src="">
+        <br>
+        <input type="file" id="real-file"hidden="hidden"/>
+        <button type="button" id="custom-button" class="button">Upload the image</button>
+        <br> <br><span id="custom-text">No file chosen,yet</span>
+        <script>
+            const realFileBtn=document.getElementById("real-file");
+            const customBtn=document.getElementById("custom-button");
+            const customTxt=document.getElementById("custom-text");
+
+            customBtn.addEventListener("click",function(){
+                realFileBtn.click();
+            });
+
+            realFileBtn.addEventListener("change",function(){
+                if(realFileBtn.value){
+                    customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                }else{
+                    customTxt.innerHTML="No file chosen,yet";
+                }
+            })
+
+        </script>
+    </p>
+
+
+
+</body>
+</html>

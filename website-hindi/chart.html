@@ -1,0 +1,218 @@
+<html>
+  <head>
+  	<style>
+  .button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+  	</style>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+	google.charts.load('current', {packages:['wordtree']});
+		google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBackgroundColor);
+
+google.charts.setOnLoadCallback(drawVisualization);
+
+google.charts.setOnLoadCallback(drawTree);
+
+google.charts.load('current', {'packages':['gauge']});
+      google.charts.setOnLoadCallback(drawgauge);
+ function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'MP', 'Guj', 'Punjab', 'Chhatighar', 'Maharashtra', 'Average'],
+          ['2015/16',  265,      938,         522,             998,           450,      354.7],
+          ['2016/17',  235,      737,        599,             1000,          288,      388],
+          ['2017/18',  257,      835,        587,             807,           397,      467],
+          ['2018/19',  239,      973,        615,             968,           215,      509.4],
+          ['2019/2o',  236,      691,         629,             935,          366,      579.6]
+        ]);
+
+        var options = {
+          title : 'Prices per year',
+          vAxis: {title: 'Prices in rupees'},
+          hAxis: {title: 'year'},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('combo_div'));
+        chart.draw(data, options);
+      }
+
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+     
+      function drawBackgroundColor() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Onion');
+
+      data.addRows([
+        [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
+        [6, 11],  [7, 27],  [8, 33],  [9, 40],  [10, 32], [11, 35],
+        [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48],
+        [18, 52], [19, 54], [20, 42], [21, 55], [22, 56], [23, 57],
+        [24, 60], [25, 50], [26, 52], [27, 51], [28, 49], [29, 53],
+        [30, 55], [31, 60], [32, 61], [33, 59], [34, 62], [35, 65],
+        [36, 62], [37, 58], [38, 55], [39, 61], [40, 64], [41, 65],
+        [42, 63], [43, 66], [44, 67], [45, 69], [46, 69], [47, 70],
+        [48, 72], [49, 68], [50, 66], [51, 65], [52, 67], [53, 70],
+        [54, 71], [55, 72], [56, 73], [57, 75], [58, 70], [59, 68],
+        [60, 64], [61, 60], [62, 65], [63, 67], [64, 68], [65, 69],
+        [66, 70], [67, 72], [68, 75], [69, 80]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Time'
+        },
+        vAxis: {
+          title: 'Prices'
+        },
+        backgroundColor: '#f1f8e9'
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+function drawTree() {
+        var data = google.visualization.arrayToDataTable(
+          [ ['Phrases'],
+            ['Prices good better than gold'],
+            ['Prices bad kibble'],
+            ['Prices good better than debentures'],
+            ['Prices good and awesome'],
+            ['Prices good investment too'],
+            ['Prices bad sink'],
+            ['Prices fail'],
+            ['Prices in the investment'],
+            ['Prices bad investment'],
+            ['Prices in the investment nifty'],
+            ['Prices bad kibble'],
+            ['Prices for adoption'],
+            ['Prices good investment'],
+            ['Prices bad kibble'],
+            ['Prices good better than mutual funds'],
+            ['Prices good evil'],
+            ['Prices good weird'],
+            ['Prices bad investment'],
+          ]
+        );
+
+        var options = {
+          wordtree: {
+            format: 'implicit',
+            word: 'price'
+          }
+        };
+
+        var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
+        chart.draw(data, options);
+      }
+      function drawgauge() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['shares', 80]
+        ]);
+
+        var options = {
+          width: 400, height: 120,
+          redFrom: 90, redTo: 100,
+          yellowFrom:75, yellowTo: 90,
+          minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
+
+        chart.draw(data, options);
+
+        setInterval(function() {
+          data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+          chart.draw(data, options);
+        }, 13000);
+        setInterval(function() {
+          data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+          chart.draw(data, options);
+        }, 5000);
+        setInterval(function() {
+          data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+          chart.draw(data, options);
+        }, 26000);
+     } 
+</script>
+</head>
+<body>
+
+<h1> कीमतें</h1>
+<h3> अलग राज्य में प्याज के लिए</h3>
+
+    <div id="combo_div" style="width: 900px; height: 500px;"></div><br>
+
+<h3> प्याज की कीमतें</h3>    
+<div id="chart_div" style="width: 900px; height: 500px"></div><br>
+
+<h3> word tree for sentiments</h3>
+    <div id="wordtree_basic" style="width: 900px; height: 500px;"></div><br>
+    
+
+</form>
+
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AgroHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.button {
+  border-radius: 4px;
+  background-color: #006400;
+  border: none;
+  opacity: 0.7;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 52px;
+  padding: 50px;
+  width: 500px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+ 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+body, html {
+  height: 100%;
+  background-image: url("bypage.gif");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 28px;
+}
+
+.topnav a:hover {
+  background-color: #228B22;
+  color: black;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+
+</style>
+</head>
+
+<body> 
+  
+  <img src="logo.jpg" align= "middle">
+    
+
+<center>
+    
+  <br>
+  <br><br>
+  <br>
+  <br>
+<center>
+
+ <table cellpadding="10";>
+  <tr>
+    <form method="get" action="checkdisease.html">
+    <button class="button"><span>पत्ता रोग की जाँच करें</span></button>
+</form>&nbsp&nbsp&nbsp&nbsp
+ <form method="get" action="rainpredict.html">
+    <button class="button"><span>मौसम का पूर्वानुमान</span></button>
+</form>&nbsp&nbsp&nbsp&nbsp
+ <form method="get" action="Soil&you.html">
+    <button class="button"><span>मिट्टी की जांच करें</span></button>
+</form>&nbsp&nbsp&nbsp&nbsp
+ <form method="get" action="abc.html">
+    <button class="button"><span>Agrobot से बात करें</span></button>
+</form>&nbsp&nbsp&nbsp&nbsp
+ <form method="get" action="https://ap1.ca.analytics.ibm.com/bi/?perspective=dashboard&id=i93F07960BAA846B98174682B4371E50E&objRef=i93F07960BAA846B98174682B4371E50E&options%5Bcollections%5D%5BcanvasExtension%5D%5Bid%5D=com.ibm.bi.dashboard.canvasExtension&options%5Bcollections%5D%5BfeatureExtension%5D%5Bid%5D=com.ibm.bi.dashboard.core-features&options%5Bcollections%5D%5Bbuttons%5D%5Bid%5D=com.ibm.bi.dashboard.buttons&options%5Bcollections%5D%5Bwidget%5D%5Bid%5D=com.ibm.bi.dashboard.widgets&options%5Bcollections%5D%5BcontentFeatureExtension%5D%5Bid%5D=com.ibm.bi.dashboard.content-features&options%5Bcollections%5D%5BboardModel%5D%5Bid%5D=com.ibm.bi.dashboard.boardModelExtension&options%5Bcollections%5D%5BsaveServices%5D%5Bid%5D=com.ibm.bi.dashboard.saveServices&options%5Bcollections%5D%5BserviceExtension%5D%5Bid%5D=com.ibm.bi.dashboard.serviceExtension&options%5Bcollections%5D%5BlayoutExtension%5D%5Bid%5D=com.ibm.bi.dashboard.layoutExtension&options%5Bcollections%5D%5BvisualizationExtension%5D%5Bid%5D=com.ibm.bi.dashboard.visualizationExtensionCA&options%5Bcollections%5D%5BcolorSetExtensions%5D%5Bid%5D=com.ibm.bi.dashboard.colorSetExtensions&options%5Bconfig%5D%5BsmartTitle%5D=false&options%5Bconfig%5D%5BeditPropertiesLabel%5D=true&options%5Bconfig%5D%5BnavigationGroupAction%5D=true&options%5Bconfig%5D%5BenableDataQuality%5D=false&options%5Bconfig%5D%5BmemberCalculation%5D=false&options%5Bconfig%5D%5BassetTags%5D%5B%5D=dashboard&options%5Bconfig%5D%5BfilterDock%5D=true&options%5Bconfig%5D%5BshowMembers%5D=true&options%5Bconfig%5D%5BassetType%5D=exploration&options%5Bconfig%5D%5BgeoService%5D=CA&isAuthoringMode=false&boardId=i93F07960BAA846B98174682B4371E50E">
+    <button class="button"><span>मुझे डैशबोर्ड दिखाओ</span></button>
+</form>&nbsp&nbsp&nbsp&nbsp
+
+</center>
+
+</div>
+
+</body>
+</html>
